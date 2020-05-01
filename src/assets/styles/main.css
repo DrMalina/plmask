@@ -1,5 +1,9 @@
 @tailwind base;
 
+body {
+  @apply font-body antialiased min-h-screen relative pb-16;
+}
+
 @tailwind components;
 
 @tailwind utilities;

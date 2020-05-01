@@ -16,18 +16,34 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
-    // {
-    //   resolve: `gatsby-plugin-manifest`,
-    //   options: {
-    //     name: `gatsby-starter-default`,
-    //     short_name: `starter`,
-    //     start_url: `/`,
-    //     background_color: `#663399`,
-    //     theme_color: `#663399`,
-    //     display: `minimal-ui`,
-    //     icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `PL-MASK.PL - Produkcja maseczek ochronnych`,
+        short_name: `PL-MASK.PL`,
+        start_url: `/`,
+        background_color: `#FFFFFF`,
+        theme_color: `#FFFFFF`,
+        display: `minimal-ui`,
+        icon: `src/assets/images/cropped-logo.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Raleway`,
+            variants: [`400`, `700`],
+          },
+          {
+            family: `Bebas Neue`,
+            subsets: [`latin-ext`],
+            variants: [`400`, `700`],
+          },
+        ],
+      },
+    },
     // // this (optional) plugin enables Progressive Web App + Offline functionality
     // // To learn more, visit: https://gatsby.dev/offline
     // // `gatsby-plugin-offline`,
