@@ -79,7 +79,7 @@ const Navigation = () => {
         >
           <ul className="w-full font-heading text-xl lg:text-lg lg:flex lg:items-center lg:justify-around">
             <li className="border-b-1 border-gray-200 lg:border-none lg:hover:text-red-main">
-              <Link to="#" className="inline-block w-full px-8 py-5 lg:p-0">
+              <Link to="/o-nas" className="inline-block w-full px-8 py-5 lg:p-0">
                 O nas
               </Link>
             </li>

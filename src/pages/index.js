@@ -9,7 +9,7 @@ const HomePage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Strona główna" />
-      <section className="mx-auto mt-12 max-w-xs md:max-w-md lg:max-w-lg flex items-center justify-center">
+      <div className="mx-auto mt-12 mb-20 max-w-xs md:max-w-md lg:max-w-lg flex items-center justify-center">
         <h1 className="w-1/2 block text-center font-heading leading-none text-5xl md:text-6xl lg:text-7xl">
           Maseczki
           <br /> ochronne
@@ -24,7 +24,7 @@ const HomePage = ({ data }) => {
           fluid={data.file.childImageSharp.fluid}
           alt="Grafika przedstawiająca człowieka w masce"
         />
-      </section>
+      </div>
     </Layout>
   );
 };

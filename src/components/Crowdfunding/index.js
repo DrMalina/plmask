@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 const Crowdfunding = () => (
-  <section className="font-heading mt-20 flex justify-evenly lg:justify-center">
+  <section className="font-heading flex justify-evenly lg:justify-center">
     <div className="flex flex-col items-center leading-none lg:mr-6">
       <div className="flex flex-col items-center text-xl">
         <p className="text-center">
           przekazaliśmy <br />
           <span id="fundedMasksCounter" className="text-6xl">
             6450
-          </span>{' '}
+          </span>
           <br />
           maseczek <br />
           szpitalom

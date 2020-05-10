@@ -34,6 +34,7 @@ module.exports = {
         fonts: [
           {
             family: `Raleway`,
+            subsets: [`latin-ext`],
             variants: [`400`, `700`],
           },
           {
