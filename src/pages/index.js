@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import Image from 'gatsby-image';
 
 import Layout from '../layouts';
@@ -9,18 +9,29 @@ const HomePage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Strona główna" />
-      <Image
-        className="mx-auto max-w-2xl"
-        fluid={data.file.childImageSharp.fluid}
-        alt="Baner z logiem strony i napisem: Maseczki ochronne polskiej produkcji"
-      />
+      <section className="mx-auto mt-12 max-w-xs md:max-w-md lg:max-w-lg flex items-center justify-center">
+        <h1 className="w-1/2 block text-center font-heading leading-none text-5xl md:text-6xl lg:text-7xl">
+          Maseczki
+          <br /> ochronne
+          <br />
+          <span className="text-red-main">
+            polskiej
+            <br /> produkcji
+          </span>
+        </h1>
+        <Image
+          className="w-1/2"
+          fluid={data.file.childImageSharp.fluid}
+          alt="Grafika przedstawiająca człowieka w masce"
+        />
+      </section>
     </Layout>
   );
 };
 
 export const query = graphql`
   {
-    file(name: { eq: "hero" }) {
+    file(name: { eq: "hero-mask" }) {
       childImageSharp {
         fluid(quality: 100) {
           ...GatsbyImageSharpFluid_tracedSVG
