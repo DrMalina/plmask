@@ -100,7 +100,10 @@ const Navigation = () => {
               </Link>
             </li>
             <li className="border-b-1 border-gray-200 lg:border-none lg:hover:text-red-main">
-              <Link to="#" className="inline-block w-full px-8 py-5 lg:p-0">
+              <Link
+                to="/wspolpraca"
+                className="inline-block w-full px-8 py-5 lg:p-0"
+              >
                 Współpraca
               </Link>
             </li>

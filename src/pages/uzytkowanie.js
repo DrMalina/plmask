@@ -6,7 +6,7 @@ import SEO from '../components/seo';
 const Usage = () => (
   <Layout>
     <SEO title="Użytkowanie" />
-    <div className="mx-auto p-6 text-sm mb-4 lg:mt-4 lg:p-8 lg:text-base lg:mb-12 max-w-4xl">
+    <div className="mx-auto mt-4 p-6 text-sm mb-4 lg:mt-4 lg:p-8 lg:text-base lg:mb-12 max-w-4xl">
       <h1 className="font-heading font-bold leading-tight text-3xl">
         Właściwe użytkowanie jednorazowej maseczki ochronnej
       </h1>
@@ -35,6 +35,7 @@ const Usage = () => (
         <ul className="list-disc pl-4">
           <li className="mt-4">
             <a
+              className="text-blue-link"
               rel="noreferrer noopener"
               href="https://www.medonet.pl/koronawirus-pytania-i-odpowiedzi/jak-sie-chronic,rodzaje-maseczek-ochronnych--jaka-maseczke-na-koronawirusa-zaleca-cdc-,artykul,19635775.html"
             >
@@ -43,6 +44,7 @@ const Usage = () => (
           </li>
           <li className="mt-4">
             <a
+              className="text-blue-link"
               rel="noreferrer noopener"
               href="https://pl-mask.pl/wp-content/uploads/2020/04/pismo-konsultant.jpg"
             >
