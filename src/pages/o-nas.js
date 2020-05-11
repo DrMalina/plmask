@@ -6,10 +6,12 @@ import SEO from '../components/seo';
 const About = () => (
   <Layout>
     <SEO title="O nas" />
-    <div className="p-8 text-sm lg:text-base lg:mb-12">
-      <h1 className="font-heading text-4xl">Nasza misja</h1>
+    <div className="mx-auto p-8 text-sm lg:text-base lg:mb-12 max-w-4xl">
+      <h1 className="font-heading font-bold text-4xl">Nasza misja</h1>
       <p>Wspierać polskie firmy, chronić Polaków i polskich lekarzy</p>
-      <h2 className="font-heading text-4xl mt-8">Dlaczego istniejemy</h2>
+      <h2 className="font-heading font-bold text-4xl mt-8">
+        Dlaczego istniejemy
+      </h2>
       <p>
         Pomysł naszej firmy narodził się z konieczności. Kilkoro naszych
         znajomych poprosiło o pomoc w przebranżowieniu swoich działalności ze
@@ -26,7 +28,7 @@ const About = () => (
         dostarczając rozwiązania które będą chronić, pomagać, dawać wygodę i
         komfort… a przy okazji dobrze wyglądać.
       </p>
-      <h2 className="font-heading text-4xl mt-8">Co robimy</h2>
+      <h2 className="font-heading font-bold text-4xl mt-8">Co robimy</h2>
       <p>
         Szyjemy maseczki ochronne z certyfikowanych materiałów, maseczki
         sportowe, maseczki dekoracyjne… Każde 10 sprzedanych przez nas maseczek
