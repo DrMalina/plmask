@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 const Crowdfunding = () => (
-  <section className="font-heading flex justify-evenly lg:justify-center">
+  <section className="font-heading flex justify-evenly lg:justify-center mb-6 lg:mb-0">
     <div className="flex flex-col items-center leading-none lg:mr-6">
       <div className="flex flex-col items-center text-xl">
         <p className="text-center">
@@ -17,7 +17,7 @@ const Crowdfunding = () => (
       </div>
     </div>
     <Link
-      to="#"
+      to="/kontakt"
       aria-labelledby="crowdfund"
       className="block flex flex-col items-center justify-between"
     >
