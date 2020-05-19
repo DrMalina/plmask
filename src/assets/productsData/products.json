@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "name": "Maseczka bawełniana wersja dla dorosłych #1",
+    "protection": "Certyfikowany materiał – OEKO-TEX",
+    "variants": "Unisex, możliwość personalizowania wzorów (nadruk, logo etc.)",
+    "packaging": 1,
+    "retailPrice": "Zobacz ofertę u naszych partnerów",
+    "wholesalePrice": "Prosimy o kontakt",
+    "buyURL": null
+  },
+  {
+    "id": 2,
+    "name": "Maseczka bawełniana wersja dla dorosłych #2",
+    "protection": "Certyfikowany materiał – OEKO-TEX",
+    "variants": "Unisex, możliwość personalizowania wzorów (nadruk, logo etc.)",
+    "packaging": 1,
+    "retailPrice": "Zobacz ofertę u naszych partnerów",
+    "wholesalePrice": "Prosimy o kontakt",
+    "buyURL": null
+  },
+  {
+    "id": 3,
+    "name": "Maseczka bawełniana wersja dla dorosłych #3",
+    "protection": "Certyfikowany materiał – OEKO-TEX",
+    "variants": "Unisex, możliwość personalizowania wzorów (nadruk, logo etc.)",
+    "packaging": 1,
+    "retailPrice": "Zobacz ofertę u naszych partnerów",
+    "wholesalePrice": "Prosimy o kontakt",
+    "buyURL": null
+  },
+  {
+    "id": 4,
+    "name": "Maseczka bawełniana wersja dla dzieci #1",
+    "protection": "Certyfikowany materiał – OEKO-TEX",
+    "variants": "Unisex, możliwość personalizowania wzorów (nadruk, logo etc.)",
+    "packaging": 1,
+    "retailPrice": "Zobacz ofertę u naszych partnerów",
+    "wholesalePrice": "Prosimy o kontakt",
+    "buyURL": null
+  },
+  {
+    "id": 5,
+    "name": "Jednorazowa maseczka ochronna na gumki",
+    "protection": "Certyfikowany materiał – 3 warstwowy spoundbond",
+    "variants": "Unisex",
+    "packaging": [10, 100],
+    "retailPrice": "Zobacz ofertę u naszych partnerów",
+    "wholesalePrice": "Prosimy o kontakt",
+    "buyURL": "https://footballpro.pl/shop/cat/528/product/1039/maseczka-trzywarstwowa-10-szt"
+  },
+  {
+    "id": 6,
+    "name": "Jednorazowa maseczka ochronna wiązana",
+    "protection": "Certyfikowany materiał – 2 warstwy 40g wigofil",
+    "variants": "Unisex",
+    "packaging": 100,
+    "retailPrice": "Zobacz ofertę u naszych partnerów",
+    "wholesalePrice": "Prosimy o kontakt",
+    "buyURL": "https://footballpro.pl/shop/cat/528/product/1040/maseczka-dwuwarstwowa-20-szt-4-60-zl-sztuka"
+  },
+  {
+    "id": 7,
+    "name": "Przyłbica",
+    "protection": "Certyfikowany materiał – folia RPET",
+    "variants": "Unisex",
+    "packaging": [1, 50],
+    "retailPrice": "Zobacz ofertę u naszych partnerów",
+    "wholesalePrice": "Prosimy o kontakt",
+    "buyURL": "https://footballpro.pl/shop/cat/528/product/1043/przylbica-ochronna"
+  }
+]
