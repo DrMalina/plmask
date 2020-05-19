@@ -22,7 +22,7 @@ const HomePage = ({ data }) => {
         <Image
           className="w-1/2 ml-4 lg:ml-0 lg:w-56"
           fluid={data.file.childImageSharp.fluid}
-          alt="Grafika przedstawiająca człowieka w masce"
+          alt=""
         />
       </div>
     </Layout>

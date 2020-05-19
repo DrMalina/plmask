@@ -52,15 +52,8 @@ const Navigation = () => {
           <Link to="#" className="sr-only">
             Przejdź do głównej treści
           </Link>
-          <Link
-            to="/"
-            className="h-auto w-40 lg:w-64"
-            aria-label="Przejdź do strony powitalnej"
-          >
-            <Image
-              fluid={data.file.childImageSharp.fluid}
-              alt="Logo PL-MASK.PL"
-            />
+          <Link to="/" className="h-auto w-40 lg:w-64">
+            <Image fluid={data.file.childImageSharp.fluid} alt="PL-MASK.PL" />
           </Link>
           <button
             aria-expanded={isMenuOpen}
