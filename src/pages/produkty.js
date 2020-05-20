@@ -13,9 +13,9 @@ const Products = ({ data }) => (
       <section className="grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center mt-4 mb-6 lg:mb-0">
         {data.products.edges.map(product => (
           <div className="flex flex-col" key={product.node.id}>
-            <Link to="#">
+            <Link to={`/produkty/${product.node.slug}`}>
               <Image
-                fluid={data[`img${product.node.id}`].childImageSharp.fluid}
+                fluid={product.node.featuredImage.childImageSharp.fluid}
                 alt={product.node.name}
                 className="w-4/5 lg:h-72 mx-auto lg:w-full"
               />
@@ -27,7 +27,7 @@ const Products = ({ data }) => (
             <div className="flex-grow flex flex-col justify-end">
               <Link
                 className="block mx-auto w-1/2 text-gray-800 font-bold py-2 px-4 border border-1 border-gray-900 rounded hover:bg-gray-200"
-                to="#"
+                to={`/produkty/${product.node.slug}`}
                 aria-label="Przejdź do szczegółów tego produktu"
               >
                 Szczegóły
@@ -44,68 +44,20 @@ export default Products;
 
 export const query = graphql`
   {
-    exampleImg: file(name: { eq: "example" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    img1: file(name: { eq: "mask-1" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    img2: file(name: { eq: "mask-2" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    img3: file(name: { eq: "mask-3" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    img4: file(name: { eq: "mask-4" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    img5: file(name: { eq: "mask-5" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    img6: file(name: { eq: "mask-6" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
-    img7: file(name: { eq: "mask-7" }) {
-      childImageSharp {
-        fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
-        }
-      }
-    }
     products: allProductsJson {
       edges {
         node {
           id
           name
+          slug
           protection
+          featuredImage {
+            childImageSharp {
+              fluid(quality: 100) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
         }
       }
     }

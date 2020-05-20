@@ -16,11 +16,18 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `products`,
-        path: `${__dirname}/src/assets/productsData`,
-        plugins: [`gatsby-transformer-json`],
+        name: `imagesProducts`,
+        path: `${__dirname}/src/assets/images/products`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `productsData`,
+        path: `${__dirname}/src/assets/productsData`,
+      },
+    },
+    `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,

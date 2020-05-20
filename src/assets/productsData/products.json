@@ -2,71 +2,85 @@
   {
     "id": 1,
     "name": "Maseczka bawełniana wersja dla dorosłych #1",
+    "slug": "maseczka-bawelniana-1",
     "protection": "Certyfikowany materiał – OEKO-TEX",
     "variants": "Unisex, możliwość personalizowania wzorów (nadruk, logo etc.)",
-    "packaging": 1,
+    "packaging": [1],
     "retailPrice": "Zobacz ofertę u naszych partnerów",
     "wholesalePrice": "Prosimy o kontakt",
-    "buyURL": null
+    "buyURL": null,
+    "featuredImage": "../images/products/mask-1.jpg"
   },
   {
     "id": 2,
     "name": "Maseczka bawełniana wersja dla dorosłych #2",
+    "slug": "maseczka-bawelniana-2",
     "protection": "Certyfikowany materiał – OEKO-TEX",
     "variants": "Unisex, możliwość personalizowania wzorów (nadruk, logo etc.)",
-    "packaging": 1,
+    "packaging": [1],
     "retailPrice": "Zobacz ofertę u naszych partnerów",
     "wholesalePrice": "Prosimy o kontakt",
-    "buyURL": null
+    "buyURL": null,
+    "featuredImage": "../images/products/mask-2.jpg"
   },
   {
     "id": 3,
     "name": "Maseczka bawełniana wersja dla dorosłych #3",
+    "slug": "maseczka-bawelniana-3",
     "protection": "Certyfikowany materiał – OEKO-TEX",
     "variants": "Unisex, możliwość personalizowania wzorów (nadruk, logo etc.)",
-    "packaging": 1,
+    "packaging": [1],
     "retailPrice": "Zobacz ofertę u naszych partnerów",
     "wholesalePrice": "Prosimy o kontakt",
-    "buyURL": null
+    "buyURL": null,
+    "featuredImage": "../images/products/mask-3.jpg"
   },
   {
     "id": 4,
     "name": "Maseczka bawełniana wersja dla dzieci #1",
+    "slug": "maseczka-bawelniana-dzieci-1",
     "protection": "Certyfikowany materiał – OEKO-TEX",
     "variants": "Unisex, możliwość personalizowania wzorów (nadruk, logo etc.)",
-    "packaging": 1,
+    "packaging": [1],
     "retailPrice": "Zobacz ofertę u naszych partnerów",
     "wholesalePrice": "Prosimy o kontakt",
-    "buyURL": null
+    "buyURL": null,
+    "featuredImage": "../images/products/mask-4.jpg"
   },
   {
     "id": 5,
     "name": "Jednorazowa maseczka ochronna na gumki",
+    "slug": "jednorazowa-maseczka-gumki",
     "protection": "Certyfikowany materiał – 3 warstwowy spoundbond",
     "variants": "Unisex",
     "packaging": [10, 100],
     "retailPrice": "Zobacz ofertę u naszych partnerów",
     "wholesalePrice": "Prosimy o kontakt",
-    "buyURL": "https://footballpro.pl/shop/cat/528/product/1039/maseczka-trzywarstwowa-10-szt"
+    "buyURL": "https://footballpro.pl/shop/cat/528/product/1039/maseczka-trzywarstwowa-10-szt",
+    "featuredImage": "../images/products/mask-5.jpg"
   },
   {
     "id": 6,
     "name": "Jednorazowa maseczka ochronna wiązana",
+    "slug": "jednorazowa-maseczka-wiazana",
     "protection": "Certyfikowany materiał – 2 warstwy 40g wigofil",
     "variants": "Unisex",
-    "packaging": 100,
+    "packaging": [100],
     "retailPrice": "Zobacz ofertę u naszych partnerów",
     "wholesalePrice": "Prosimy o kontakt",
-    "buyURL": "https://footballpro.pl/shop/cat/528/product/1040/maseczka-dwuwarstwowa-20-szt-4-60-zl-sztuka"
+    "buyURL": "https://footballpro.pl/shop/cat/528/product/1040/maseczka-dwuwarstwowa-20-szt-4-60-zl-sztuka",
+    "featuredImage": "../images/products/mask-6.jpg"
   },
   {
     "id": 7,
     "name": "Przyłbica",
+    "slug": "przylbica",
     "protection": "Certyfikowany materiał – folia RPET",
     "variants": "Unisex",
     "packaging": [1, 50],
     "retailPrice": "Zobacz ofertę u naszych partnerów",
     "wholesalePrice": "Prosimy o kontakt",
-    "buyURL": "https://footballpro.pl/shop/cat/528/product/1043/przylbica-ochronna"
+    "buyURL": "https://footballpro.pl/shop/cat/528/product/1043/przylbica-ochronna",
+    "featuredImage": "../images/products/mask-7.jpg"
   }
 ]
