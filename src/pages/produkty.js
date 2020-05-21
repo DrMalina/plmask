@@ -10,7 +10,7 @@ const Products = ({ data }) => (
     <SEO title="Produkty" />
     <div className="mx-auto p-4 md:p-8 mb-2 text-sm lg:text-base lg:mb-4 max-w-4xl">
       <h1 className="font-heading font-bold text-3xl">Produkty</h1>
-      <section className="grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-center mt-4 mb-6 lg:mb-0">
+      <section className="grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 row-gap-10 text-center mt-4 mb-6 lg:mb-0">
         {data.products.edges.map(product => (
           <div className="flex flex-col" key={product.node.id}>
             <Link to={`/produkty/${product.node.slug}`}>
@@ -53,7 +53,7 @@ export const query = graphql`
           protection
           featuredImage {
             childImageSharp {
-              fluid(quality: 100) {
+              fluid(quality: 80) {
                 ...GatsbyImageSharpFluid_tracedSVG
               }
             }

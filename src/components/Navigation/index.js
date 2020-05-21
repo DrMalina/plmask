@@ -9,7 +9,7 @@ const Navigation = () => {
     {
       file(name: { eq: "logo" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }

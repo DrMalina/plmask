@@ -8,17 +8,7 @@ exports.createPages = async ({ graphql, actions }) => {
       allProductsJson {
         edges {
           node {
-            id
-            name
             slug
-            protection
-            featuredImage {
-              childImageSharp {
-                fluid(quality: 100) {
-                  src
-                }
-              }
-            }
           }
         }
       }
@@ -29,7 +19,7 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `produkty/${product.node.slug}`,
       component: productTemplate,
-      context: { product },
+      context: { slug: product.node.slug },
     });
   });
 };
