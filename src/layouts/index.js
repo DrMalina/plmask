@@ -4,12 +4,12 @@ import Crowdfunding from '../components/Crowdfunding';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 
-const MainLayout = ({ children }) => (
+const MainLayout = ({ renderCrowdfunding = true, children }) => (
   <>
     <Navigation />
     <main className="container mx-auto">
       {children}
-      <Crowdfunding />
+      {renderCrowdfunding && <Crowdfunding />}
     </main>
     <Footer />
   </>
