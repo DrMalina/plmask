@@ -6,7 +6,7 @@ import SEO from '../components/seo';
 const About = () => (
   <Layout>
     <SEO title="O nas" />
-    <div className="mx-auto p-4 md:p-8 mb-2 text-sm lg:text-base lg:mb-4 max-w-4xl">
+    <div className="mx-auto mt-4 p-4 md:p-8 mb-2 text-sm lg:text-base lg:mb-4 max-w-screen-lg">
       <h1 className="font-heading font-bold text-3xl">Nasza misja</h1>
       <p>Wspierać polskie firmy, chronić Polaków i polskich lekarzy</p>
       <h2 className="font-heading font-bold text-3xl mt-6 lg:mt-8">
