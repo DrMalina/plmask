@@ -33,7 +33,7 @@ const ContactForm = () => {
           id="email"
           type="text"
           className={`font-sans w-full shadow border-1 ${
-            errors.email ? 'border-red-500' : 'border-gray-500'
+            errors.email ? 'border-red-main' : 'border-gray-500'
           }  rounded py-3 px-4 text-gray-700 leading-tight`}
           aria-invalid={errors.email ? 'true' : 'false'}
           aria-describedby="emailErrorRequired emailErrorPattern"
@@ -47,7 +47,7 @@ const ContactForm = () => {
         <span
           role="alert"
           id="emailErrorRequired"
-          className={`text-red-500 italic mt-2 ${
+          className={`text-red-main italic mt-2 ${
             errors.email && errors.email.type === 'required'
               ? 'block'
               : 'hidden'
@@ -58,7 +58,7 @@ const ContactForm = () => {
         <span
           role="alert"
           id="emailErrorPattern"
-          className={`text-red-500 italic mt-2 ${
+          className={`text-red-main italic mt-2 ${
             errors.email && errors.email.type === 'pattern' ? 'block' : 'hidden'
           }`}
         >
@@ -77,7 +77,7 @@ const ContactForm = () => {
           name="phone"
           id="phone"
           className={`font-sans w-full appearance-none shadow border-1 ${
-            errors.phone ? 'border-red-500' : 'border-gray-500'
+            errors.phone ? 'border-red-main' : 'border-gray-500'
           } rounded py-2 px-3 text-gray-700`}
           aria-invalid={errors.phone ? 'true' : 'false'}
           aria-describedby="phoneErrorRequired phoneErrorPattern"
@@ -90,7 +90,7 @@ const ContactForm = () => {
         <span
           role="alert"
           id="phoneErrorRequired"
-          className={`text-red-500 italic mt-2 ${
+          className={`text-red-main italic mt-2 ${
             errors.phone && errors.phone.type === 'required'
               ? 'block'
               : 'hidden'
@@ -101,7 +101,7 @@ const ContactForm = () => {
         <span
           role="alert"
           id="phoneErrorPattern"
-          className={`text-red-500 italic mt-2 ${
+          className={`text-red-main italic mt-2 ${
             errors.phone && errors.phone.type === 'pattern' ? 'block' : 'hidden'
           }`}
         >
@@ -145,11 +145,7 @@ const ContactForm = () => {
             className="mr-2"
             ref={register}
           />
-          <label
-            id="hospitals-label"
-            htmlFor="hospitals"
-            className="mr-4 text-red-main"
-          >
+          <label id="hospitals-label" htmlFor="hospitals" className="mr-4">
             Maseczki dla szpitali
           </label>
         </div>
@@ -205,7 +201,7 @@ const ContactForm = () => {
         <span
           role="alert"
           id="gdpr"
-          className={`text-red-500 italic mt-2 ${
+          className={`text-red-main italic mt-2 ${
             errors.gdpr ? 'block' : 'hidden'
           }`}
         >
