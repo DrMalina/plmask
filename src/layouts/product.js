@@ -1,26 +1,29 @@
 import React, { useState } from 'react';
 import { graphql, Link } from 'gatsby';
 import Image from 'gatsby-image';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 
 import Layout from './index';
 import SEO from '../components/seo';
 
 const ProductLayout = ({ data: { productsJson } }) => {
-  const [selectedThumbnail, setSelectedThumbnail] = useState(0);
-  const imgQueue = [...productsJson.images];
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const [isLighboxOpen, setIsLightboxOpen] = useState(false);
+  const images = [...productsJson.images];
 
   const changeImg = direction => {
     if (direction === 'next') {
-      if (selectedThumbnail < imgQueue.length - 1) {
-        setSelectedThumbnail(selectedThumbnail + 1);
+      if (photoIndex < images.length - 1) {
+        setPhotoIndex(photoIndex + 1);
       } else {
-        setSelectedThumbnail(0);
+        setPhotoIndex(0);
       }
     } else if (direction === 'previous') {
-      if (selectedThumbnail > 0) {
-        setSelectedThumbnail(selectedThumbnail - 1);
+      if (photoIndex > 0) {
+        setPhotoIndex(photoIndex - 1);
       } else {
-        setSelectedThumbnail(imgQueue.length - 1);
+        setPhotoIndex(images.length - 1);
       }
     }
   };
@@ -28,17 +31,17 @@ const ProductLayout = ({ data: { productsJson } }) => {
   return (
     <Layout>
       <SEO title={productsJson.name} />
-      <div className="mx-auto p-4 md:p-8 mb-2 text-sm lg:text-base lg:mb-4 max-w-4xl">
+      <div className="mx-auto p-4 mt-4 md:p-8 mb-2 text-sm lg:text-base lg:mb-4 max-w-screen-lg">
         <h1 className="font-heading font-bold text-3xl">Produkty</h1>
-        <Link to="/produkty" className="block italic">
+        <Link to="/produkty" className="italic inline-block mt-2">
           <span aria-hidden="true">&#8592;</span> Powrót do wszystkich produktów
         </Link>
-        <div className="flex mt-8">
-          <section className="w-1/2 flex flex-col">
+        <div className="grid grid-cols-2 gap-20 mt-8">
+          <section className="col-span-1 flex flex-col">
             <div className="grid grid-cols-10">
-              <div className="h-full flex items-center text-gray-700 col-span-1">
+              <div className="h-full flex justify-start items-center text-gray-700 col-span-2">
                 <button
-                  className="w-full py-6 flex justify-center items-center"
+                  className="w-1/2 py-4 flex justify-start items-center"
                   onClick={() => changeImg('previous')}
                 >
                   <span className="sr-only">Poprzednie zdjęcie</span>
@@ -53,15 +56,19 @@ const ProductLayout = ({ data: { productsJson } }) => {
                   </svg>
                 </button>
               </div>
-              <div className="w-full h-80 overflow-hidden col-span-8 flex items-center">
+              <button
+                className="w-full h-80 overflow-hidden col-span-6 flex items-center"
+                onClick={() => setIsLightboxOpen(true)}
+              >
+                <span className="sr-only">Powiększ zdjęcie</span>
                 <Image
                   className="w-full h-auto"
-                  fluid={imgQueue[selectedThumbnail].childImageSharp.fluid}
+                  fluid={images[photoIndex].childImageSharp.fluid}
                 />
-              </div>
-              <div className="h-full flex items-center text-gray-700 col-span-1">
+              </button>
+              <div className="h-full flex justify-end items-center text-gray-700 col-span-2">
                 <button
-                  className="w-full py-6 flex justify-center items-center"
+                  className="w-1/2 py-4 flex justify-end items-center"
                   onClick={() => changeImg('next')}
                 >
                   <span className="sr-only">Następne zdjęcie</span>
@@ -79,29 +86,49 @@ const ProductLayout = ({ data: { productsJson } }) => {
             </div>
             <div
               className={`grid ${
-                imgQueue.length < 4 ? 'grid-cols-3' : 'grid-cols-4'
-              } gap-2 mt-2`}
+                images.length < 4 ? 'grid-cols-3' : 'grid-cols-4'
+              } gap-2 mt-2 px-12`}
             >
               {productsJson.images.map((img, idx) => (
                 <button
-                  className="w-full flex flex-grow"
+                  className="w-full h-24 flex flex-grow"
                   key={idx}
-                  onClick={() => setSelectedThumbnail(idx)}
+                  onClick={() => setPhotoIndex(idx)}
                 >
                   <Image
-                    className="w-full h-24"
+                    className={
+                      productsJson.name.includes('Spray')
+                        ? 'w-1/2 mx-auto'
+                        : 'w-full'
+                    }
                     fluid={img.childImageSharp.fluid}
                   />
                 </button>
               ))}
             </div>
           </section>
-          <section className="w-1/2">
-            <p>{productsJson.name}</p>
-            <p>{productsJson.protection}</p>
-            <p>{productsJson.packaging}</p>
+          <section className="col-span-1 text-right">
+            <h2 className="font-bold text-xl">{productsJson.name}</h2>
+            <p className="text-gray-800 text-sm mt-6">
+              {productsJson.description}
+            </p>
           </section>
         </div>
+        {isLighboxOpen && (
+          <Lightbox
+            mainSrc={images[photoIndex].childImageSharp.fluid.src}
+            nextSrc={
+              images[(photoIndex + 1) % images.length].childImageSharp.fluid.src
+            }
+            prevSrc={
+              images[(photoIndex + images.length - 1) % images.length]
+                .childImageSharp.fluid.src
+            }
+            onCloseRequest={() => setIsLightboxOpen(false)}
+            onMovePrevRequest={() => changeImg('previous')}
+            onMoveNextRequest={() => changeImg('next')}
+          />
+        )}
       </div>
     </Layout>
   );
@@ -111,11 +138,11 @@ export const query = graphql`
   query queryProduct($slug: String!) {
     productsJson(slug: { eq: $slug }) {
       name
-      protection
-      packaging
+      description
       images {
         childImageSharp {
           fluid(quality: 90) {
+            src
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
