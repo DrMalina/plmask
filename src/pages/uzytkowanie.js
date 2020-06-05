@@ -36,7 +36,7 @@ const Usage = () => (
           <li className="mt-4">
             <a
               className="text-blue-link"
-              rel="noreferrer noopener"
+              rel="noopener"
               href="https://www.medonet.pl/koronawirus-pytania-i-odpowiedzi/jak-sie-chronic,rodzaje-maseczek-ochronnych--jaka-maseczke-na-koronawirusa-zaleca-cdc-,artykul,19635775.html"
             >
               Artykuł o rodzajach maseczek ochronnych
@@ -45,7 +45,7 @@ const Usage = () => (
           <li className="mt-4">
             <a
               className="text-blue-link"
-              rel="noreferrer noopener"
+              rel="noopener"
               href="https://pl-mask.pl/wp-content/uploads/2020/04/pismo-konsultant.jpg"
             >
               Wytyczne konsultanta krajowego ds. chorób zakaźnych dla maseczek

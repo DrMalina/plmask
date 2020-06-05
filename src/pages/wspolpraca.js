@@ -13,7 +13,7 @@ const Cooperation = ({ data }) => (
         Z kim współpracujemy
       </h1>
       <figure className="mt-10">
-        <Image fixed={data.dart.childImageSharp.fixed} alt="Logo firmy DART" />
+        <Image fixed={data.dart.childImageSharp.fixed} alt="Firma DART" />
         <figcaption className="mt-4">
           Agencja reklamowa, która kompletnie za darmo przygotowała nam
           wszystkie materiały do komunkacji ze światem. Skorzystajcie z ich
@@ -24,7 +24,7 @@ const Cooperation = ({ data }) => (
         <Image
           className="max-w-xs"
           fluid={data.academies.childImageSharp.fluid}
-          alt="Loga kolejno od lewej: Akademia Piłkarska Reissa, Akademia Piłkarska Stal Gorzów Wielkopolski, Akademia Piłkarska Falubaz"
+          alt="Kolejno od lewej: Akademia Piłkarska Reissa, Akademia Piłkarska Stal Gorzów Wielkopolski, Akademia Piłkarska Falubaz"
         />
         <figcaption className="mt-4">
           Pomogli nam testować nasze produkty i jako pierwsi kupili sporą partię
@@ -33,7 +33,7 @@ const Cooperation = ({ data }) => (
           <a
             className="text-blue-link"
             href="https://footballpro.pl/"
-            rel="noreferrer noopener"
+            rel="noopener"
           >
             footballpro.pl
           </a>
