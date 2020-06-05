@@ -34,12 +34,11 @@ const About = () => (
       <p>
         Szyjemy maseczki ochronne z certyfikowanych materiałów, maseczki
         sportowe, maseczki dekoracyjne… Każde 10 sprzedanych przez nas maseczek
-        finansuje produkcję gratisowej maseczki dla szpitali zakaźnych w Zgierzu
-        oraz w Poznaniu. Jeśli Ty lub Twoja firma chcecie dołączyć do pomocy
-        szpitalom, możecie za naszym pośrednictwem ufundować każdą dowolną ilość
-        maseczek do jednego ze szpitali zakaźnych, które wspieramy (darowizna
-        VAT 0%). My zajmiemy się ich dostarczeniem oraz formalnościami
-        finansowymi.
+        finansuje produkcję gratisowej maseczki dla szpitali zakaźnych w Polsce.
+        Jeśli Ty lub Twoja firma chcecie dołączyć do pomocy szpitalom, możecie
+        za naszym pośrednictwem ufundować każdą dowolną ilość maseczek do
+        jednego ze szpitali zakaźnych, które wspieramy (darowizna VAT 0%). My
+        zajmiemy się ich dostarczeniem oraz formalnościami finansowymi.
       </p>
     </div>
   </Layout>
