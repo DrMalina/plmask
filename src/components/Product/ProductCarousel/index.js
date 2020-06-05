@@ -80,12 +80,12 @@ const ProductCarousel = ({ productImages, type }) => {
       >
         {images.map((img, idx) => (
           <button
-            className="w-full h-24 flex flex-grow"
+            className="w-full"
             key={idx}
             onClick={() => setPhotoIndex(idx)}
           >
             <Image
-              className="mx-auto w-full"
+              className="w-full h-24"
               objectFit={type === 'mask' ? 'cover' : 'contain'}
               fluid={img.childImageSharp.fluid}
             />
