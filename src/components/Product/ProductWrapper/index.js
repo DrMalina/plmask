@@ -9,7 +9,11 @@ import ProductCarousel from '../ProductCarousel';
 const ProductInfo = ({ product }) => {
   return (
     <section className="grid grid-cols-2 gap-1 md:gap-12 mt-0 md:mt-8">
-      <ProductCarousel productImages={product.images} type={product.type} />
+      <ProductCarousel
+        name={product.name}
+        productImages={product.images}
+        type={product.type}
+      />
       <div className="col-span-2 lg:col-span-1 flex flex-col items-start">
         <ProductName name={product.name} />
         <div className="w-full flex flex-col items-center lg:flex-row mt-4 xs:mt-8">

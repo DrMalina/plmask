@@ -3,7 +3,7 @@ import Image from 'gatsby-image/withIEPolyfill';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
-const ProductCarousel = ({ productImages, type }) => {
+const ProductCarousel = ({ name, productImages, type }) => {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isLighboxOpen, setIsLightboxOpen] = useState(false);
 
@@ -26,9 +26,9 @@ const ProductCarousel = ({ productImages, type }) => {
   };
 
   return (
-    <div className="col-span-2 lg:col-span-1 flex flex-col">
+    <div className="col-span-2 lg:col-span-1 flex flex-col mb-4">
       <div className="grid grid-cols-10">
-        <div className="h-full flex justify-start items-center text-gray-700 col-span-1 md:col-span-2">
+        <div className="h-auto flex justify-start items-center text-gray-700 col-span-1 md:col-span-2">
           <button
             className="w-full md:w-1/2 py-4 flex justify-start items-center"
             onClick={() => changeImg('previous')}
@@ -46,16 +46,17 @@ const ProductCarousel = ({ productImages, type }) => {
           </button>
         </div>
         <button
-          className="w-full h-72 xs:h-80 mt-8 xs:mt-0 overflow-hidden col-span-8 md:col-span-6 flex items-center"
+          className="w-full h-72 xs:h-80 mt-8 xs:mt-0 overflow-hidden col-span-8 md:col-span-6 flex items-center justify-center"
           onClick={() => setIsLightboxOpen(true)}
         >
           <span className="sr-only">Powiększ zdjęcie</span>
           <Image
-            className="w-full h-auto"
+            className="w-full"
             fluid={images[photoIndex].childImageSharp.fluid}
+            alt={name}
           />
         </button>
-        <div className="h-full flex justify-end items-center text-gray-700 col-span-1 md:col-span-2">
+        <div className="h-auto flex justify-end items-center text-gray-700 col-span-1 md:col-span-2">
           <button
             className="w-full md:w-1/2 py-4 flex justify-end items-center"
             onClick={() => changeImg('next')}
@@ -74,7 +75,7 @@ const ProductCarousel = ({ productImages, type }) => {
         </div>
       </div>
       <div
-        className={`hidden md:grid ${
+        className={`grid ${
           images.length < 4 ? 'grid-cols-3' : 'grid-cols-4'
         } gap-2 mt-2 px-2 md:px-12`}
       >
@@ -88,6 +89,7 @@ const ProductCarousel = ({ productImages, type }) => {
               className="w-full h-24"
               objectFit={type === 'mask' ? 'cover' : 'contain'}
               fluid={img.childImageSharp.fluid}
+              alt={`${name} nr: ${idx + 1}`}
             />
           </button>
         ))}

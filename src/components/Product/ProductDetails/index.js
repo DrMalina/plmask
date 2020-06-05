@@ -11,7 +11,7 @@ const ProductDetails = ({ product }) => {
 
   if (product.type === 'mask') {
     return (
-      <ul className="w-full text-center text-lg lg:text-left md:text-base lg:w-1/2 pl-0 lg:pl-4 font-heading list-none list-inside">
+      <ul className="w-full text-center text-lg lg:text-left lg:w-1/2 pl-0 lg:pl-4 font-heading list-none list-inside">
         <li>
           <span className="text-gray-700">Certyfikat: </span>
           <span className="font-semibold">{product.protection}</span>
@@ -52,7 +52,7 @@ const ProductDetails = ({ product }) => {
     );
   } else if (product.type === 'gloves') {
     return (
-      <ul className="w-full text-center text-lg lg:text-left md:text-base lg:w-1/2 pl-0 lg:pl-4 font-heading list-none list-inside">
+      <ul className="w-full text-center text-lg lg:text-left lg:w-1/2 pl-0 lg:pl-4 font-heading list-none list-inside">
         <li>
           <span className="text-gray-700">Typ: </span>
           <span className="font-semibold">{product.protection}</span>
@@ -97,7 +97,7 @@ const ProductDetails = ({ product }) => {
     );
   } else if (product.type === 'spray') {
     return (
-      <ul className="w-full text-center text-lg lg:text-left md:text-base lg:w-1/2 pl-0 lg:pl-4 font-heading list-none list-inside">
+      <ul className="w-full text-center text-lg lg:text-left lg:w-1/2 pl-0 lg:pl-4 font-heading list-none list-inside">
         <li>
           <span className="text-gray-700">Rodzaj: </span>
           <span className="font-semibold">{product.usage}</span>
