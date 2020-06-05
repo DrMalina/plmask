@@ -6,6 +6,7 @@ module.exports = {
   separator: ':',
   theme: {
     screens: {
+      xs: '350px',
       sm: '640px',
       md: '768px',
       lg: '1024px',
@@ -42,6 +43,7 @@ module.exports = {
         900: '#742a2a',
       },
       orange: {
+        allegro: '#ff5a00',
         100: '#fffaf0',
         200: '#feebc8',
         300: '#fbd38d',
