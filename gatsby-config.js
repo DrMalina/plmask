@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `PL-MASK.PL`,
-    description: `Maseczki ochronne polskiej produkcji. Szyjemy maseczki ochronne z certyfikowanych materiałów, maseczki sportowe, maseczki dekoracyjne… Każde 10 sprzedanych przez nas maseczek finansuje produkcję gratisowej maseczki dla szpitali zakaźnych w Zgierzu oraz w Poznaniu.`,
-    author: `Maciej Malinowski`,
+    description: `Maseczki ochronne polskiej produkcji. Każde 10 sprzedanych przez nas maseczek finansuje produkcję gratisowej maseczki dla szpitali zakaźnych w Polsce.`,
+    keywords: ['maseczki', 'polska firma', 'covid'],
+    author: `PL-Mask`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
