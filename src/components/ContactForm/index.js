@@ -209,7 +209,7 @@ const ContactForm = () => {
         </span>
       </div>
       <button
-        className="font-heading mx-auto lg:ml-0 text-lg w-40 mt-4 border-1 border-gray-700 py-2 px-4 rounded hover:bg-gray-200"
+        className="font-heading mx-auto lg:ml-0 text-lg w-40 mt-10 border-1 border-gray-700 py-2 px-4 rounded hover:bg-gray-200"
         type="submit"
       >
         Wyślij
