@@ -3,7 +3,7 @@ import { graphql, Link } from 'gatsby';
 
 import Layout from './index';
 import SEO from '../components/seo';
-import ProductInfo from '../components/ProductInfo';
+import ProductWrapper from '../components/Product/ProductWrapper';
 
 const ProductLayout = ({ data: { productsJson } }) => {
   return (
@@ -14,7 +14,7 @@ const ProductLayout = ({ data: { productsJson } }) => {
         <Link to="/produkty" className="italic inline-block mt-2">
           <span aria-hidden={true}>&#8592;</span> Powrót do wszystkich produktów
         </Link>
-        <ProductInfo product={productsJson} />
+        <ProductWrapper product={productsJson} />
         <div className="mt-12 lg:mt-24 lg:mb-6 mx-auto text-center font-heading text-2xl">
           <p>
             Pamiętaj, że kupując od nas wspierasz{' '}
