@@ -33,7 +33,7 @@ export const query = graphql`
     file(name: { eq: "hero-mask" }) {
       childImageSharp {
         fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }

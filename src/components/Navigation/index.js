@@ -14,7 +14,7 @@ const Navigation = () => {
       file(name: { eq: "logo" }) {
         childImageSharp {
           fluid(quality: 100) {
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }

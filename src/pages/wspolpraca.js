@@ -52,14 +52,14 @@ export const query = graphql`
     dart: file(name: { eq: "dart" }) {
       childImageSharp {
         fixed(width: 151, height: 45, quality: 100) {
-          ...GatsbyImageSharpFixed_tracedSVG
+          ...GatsbyImageSharpFixed_withWebp_tracedSVG
         }
       }
     }
     academies: file(name: { eq: "akademie" }) {
       childImageSharp {
         fluid(quality: 100) {
-          ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_withWebp_tracedSVG
         }
       }
     }
