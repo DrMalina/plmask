@@ -11,7 +11,7 @@ const ProductLayout = ({ data: { productsJson } }) => {
       <SEO title={productsJson.name} />
       <div className="mx-auto p-4 mt-4 md:p-8 mb-10 text-sm lg:text-base lg:mb-4 max-w-screen-lg">
         <h1 className="font-heading font-bold text-3xl">Produkty</h1>
-        <Link to="/produkty" className="italic inline-block mt-2">
+        <Link to="/produkty" className="italic inline-block mt-2 p-2">
           <span aria-hidden={true}>&#8592;</span> Powrót do wszystkich produktów
         </Link>
         <ProductWrapper product={productsJson} />
@@ -52,7 +52,7 @@ export const query = graphql`
         childImageSharp {
           fluid(quality: 90) {
             src
-            ...GatsbyImageSharpFluid_tracedSVG
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
