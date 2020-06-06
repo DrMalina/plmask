@@ -9,7 +9,7 @@ const HomePage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Strona główna" />
-      <div className="mx-auto p-4 md:p-0 mt-12 lg:mt-20 mb-20 max-w-xs md:max-w-md lg:max-w-xl flex items-center justify-center">
+      <div className="mx-auto p-4 md:p-0 mt-12 lg:mt-20 mb-16 max-w-xs md:max-w-md lg:max-w-xl flex items-center justify-center">
         <h1 className="w-1/2 block text-center font-heading leading-none text-5xl md:text-6xl lg:text-7xl">
           Maseczki <br />
           ochronne <br />

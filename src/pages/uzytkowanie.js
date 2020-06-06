@@ -6,7 +6,7 @@ import SEO from '../components/seo';
 const Usage = () => (
   <Layout>
     <SEO title="Użytkowanie" />
-    <div className="mx-auto mt-4 p-4 md:p-6 text-sm mb-12 lg:mt-6 lg:p-8 lg:text-base lg:mb-12 max-w-screen-lg">
+    <div className="mx-auto mt-4 p-4 md:p-6 text-sm mb-12 lg:mt-6 lg:p-8 lg:text-base lg:mb-4 max-w-screen-lg">
       <h1 className="font-heading font-bold leading-tight text-3xl">
         Właściwe użytkowanie jednorazowej maseczki ochronnej
       </h1>
