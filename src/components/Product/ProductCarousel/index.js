@@ -3,7 +3,7 @@ import Image from 'gatsby-image/withIEPolyfill';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 
-const ProductCarousel = ({ name, productImages, type }) => {
+const ProductCarousel = ({ title, productImages, type }) => {
   const [photoIndex, setPhotoIndex] = useState(0);
   const [isLighboxOpen, setIsLightboxOpen] = useState(false);
 
@@ -52,8 +52,8 @@ const ProductCarousel = ({ name, productImages, type }) => {
           <span className="sr-only">Powiększ zdjęcie</span>
           <Image
             className="w-full"
-            fluid={images[photoIndex].childImageSharp.fluid}
-            alt={name}
+            fluid={images[photoIndex].fluid}
+            alt={title}
           />
         </button>
         <div className="h-auto flex justify-end items-center text-gray-700 col-span-1 md:col-span-2">
@@ -75,9 +75,11 @@ const ProductCarousel = ({ name, productImages, type }) => {
         </div>
       </div>
       <div
-        className={`grid ${
-          images.length < 4 ? 'grid-cols-3' : 'grid-cols-4'
-        } gap-2 mt-2 px-2 md:px-12`}
+        className={
+          images.length < 4
+            ? `grid grid-cols-${images.length} gap-4 mt-2 px-2 md:px-12`
+            : 'grid grid-cols-4 gap-2 mt-2 px-2 md:px-12'
+        }
       >
         {images.map((img, idx) => (
           <button
@@ -88,21 +90,18 @@ const ProductCarousel = ({ name, productImages, type }) => {
             <Image
               className="w-full h-24"
               objectFit={type === 'mask' ? 'cover' : 'contain'}
-              fluid={img.childImageSharp.fluid}
-              alt={`${name} nr: ${idx + 1}`}
+              fluid={img.fluid}
+              alt={`${title} nr: ${idx + 1}`}
             />
           </button>
         ))}
       </div>
       {isLighboxOpen && (
         <Lightbox
-          mainSrc={images[photoIndex].childImageSharp.fluid.src}
-          nextSrc={
-            images[(photoIndex + 1) % images.length].childImageSharp.fluid.src
-          }
+          mainSrc={images[photoIndex].fluid.src}
+          nextSrc={images[(photoIndex + 1) % images.length].fluid.src}
           prevSrc={
-            images[(photoIndex + images.length - 1) % images.length]
-              .childImageSharp.fluid.src
+            images[(photoIndex + images.length - 1) % images.length].fluid.src
           }
           onCloseRequest={() => setIsLightboxOpen(false)}
           onMovePrevRequest={() => changeImg('previous')}

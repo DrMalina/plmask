@@ -2,17 +2,17 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Image from 'gatsby-image/withIEPolyfill';
 
-const ProductCard = ({ name, slug, fluid, type }) => (
+const ProductCard = ({ title, slug, fluid, type }) => (
   <div className="flex flex-col border-1 border-gray-300 pb-6">
     <Link to={`/produkty/${slug}`} className="w-full h-72">
       <Image
         fluid={fluid}
-        alt={name}
+        alt={title}
         objectFit={type === 'mask' ? 'cover' : 'contain'}
         className="mx-auto w-4/5 lg:w-full h-72"
       />
     </Link>
-    <h2 className="px-2 font-heading text-2xl lg:text-lg mt-2 mb-2">{name}</h2>
+    <h2 className="px-2 font-heading text-2xl lg:text-lg mt-2 mb-2">{title}</h2>
     <div className="flex-grow flex flex-col justify-end">
       <Link
         className="block mt-4 mx-auto text-gray-800 flex items-center py-2 px-8"
