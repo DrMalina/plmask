@@ -6,21 +6,21 @@ import ProductAvailability from '../ProductAvailability';
 import ProductDescription from '../ProductDescription';
 import ProductCarousel from '../ProductCarousel';
 
-const ProductInfo = ({ product }) => {
+const ProductWrapper = ({ product }) => {
   return (
     <section className="grid grid-cols-2 gap-1 md:gap-12 mt-0 md:mt-8">
       <ProductCarousel
-        name={product.name}
+        title={product.title}
         productImages={product.images}
-        type={product.type}
+        type={product.productType}
       />
       <div className="col-span-2 lg:col-span-1 flex flex-col items-start">
-        <ProductName name={product.name} />
+        <ProductName title={product.title} />
         <div className="w-full flex flex-col items-center lg:flex-row mt-4 xs:mt-8">
-          <ProductDetails product={product} />
+          <ProductDetails details={product.details} />
           <ProductAvailability
             available={product.available}
-            buyURL={product.buyURL}
+            buyUrl={product.buyUrl}
           />
         </div>
         <ProductDescription description={product.description} />
@@ -29,4 +29,4 @@ const ProductInfo = ({ product }) => {
   );
 };
 
-export default ProductInfo;
+export default ProductWrapper;

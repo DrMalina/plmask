@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-const ProductAvailability = ({ available, buyURL }) => {
+const ProductAvailability = ({ available, buyUrl }) => {
   if (available) {
     return (
       <div className="w-full mt-10 lg:mt-0 lg:w-1/2 pr-0 lg:pr-4">
@@ -17,7 +17,7 @@ const ProductAvailability = ({ available, buyURL }) => {
           <span className="ml-4 font-heading text-lg">Produkt dostępny</span>
         </div>
         <a
-          href={buyURL}
+          href={buyUrl}
           rel="noopener"
           className="w-4/5 mx-auto md:w-1/2 lg:w-full border border-1 border-orange-allegro rounded py-2 mt-6 flex items-center justify-center"
         >
