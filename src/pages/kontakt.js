@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Layout from '../layouts';
 import SEO from '../components/seo';
-import ContactForm from '../components/ContactForm';
+
+import FormWrapper from '../components/Form/FormWrapper';
+import Message from '../components/Form/Message';
 
 const Contact = () => {
+  const [isFormSent, setIsFormSent] = useState(false);
+
   return (
     <Layout renderCrowdfunding={false}>
       <SEO title="Kontakt" />
@@ -12,7 +16,8 @@ const Contact = () => {
         <h1 className="font-heading font-bold leading-tight text-3xl">
           Kontakt
         </h1>
-        <ContactForm />
+        <FormWrapper isFormSent={isFormSent} setIsFormSent={setIsFormSent} />
+        {isFormSent && <Message setIsFormSent={setIsFormSent} />}
       </div>
     </Layout>
   );
