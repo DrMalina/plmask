@@ -9,7 +9,7 @@ const Products = ({ data }) => {
   const renderError = () => {
     if (!data) {
       return (
-        <h2 className="col-span-1 md:col-span-2 lg:col-span-3 text-center font-bold text-lg">
+        <h2 className="col-span-1 md:col-span-2 lg:col-span-3 text-center text-lg">
           Coś poszło nie tak...
         </h2>
       );
