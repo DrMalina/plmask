@@ -28,24 +28,14 @@ module.exports = {
         background_color: `#FFFFFF`,
         theme_color: `#FFFFFF`,
         display: `minimal-ui`,
-        icon: `src/assets/images/cropped-logo.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          {
-            family: `Raleway`,
-            subsets: [`latin-ext`],
-            variants: [`400`, `600`, `700`],
-          },
-          {
-            family: `Bebas Neue`,
-            subsets: [`latin-ext`],
-            variants: [`400`, `700`],
-          },
-        ],
+        fonts: [`Raleway\:400`, `Bebas Neue\:400,700`],
+        display: 'swap',
       },
     },
     {
