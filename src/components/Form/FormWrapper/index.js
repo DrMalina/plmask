@@ -22,16 +22,13 @@ const FormWrapper = ({ isFormSent, setIsFormSent }) => {
       .join('&');
   };
 
-  const onSubmit = ({ email, phone, purchase, message }, e) => {
-    const formQuery = { email, phone, purchase, message };
-
+  const onSubmit = (data, e) => {
     e.preventDefault();
-    setIsFormSent(true);
 
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...formQuery }),
+      body: encode({ 'form-name': 'contact', ...data }),
     })
       .then(() => setIsFormSent(true))
       .catch(error => alert(error));
