@@ -9,8 +9,8 @@ const RadioGroup = ({ register, selectedPurchaseOption }) => {
         field="purchase"
         option="individual"
         label="Zakup indywidualny"
-        defaultChecked={true}
         register={register}
+        defaultChecked
       />
       <RadioInput
         field="purchase"
