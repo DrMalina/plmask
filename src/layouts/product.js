@@ -33,6 +33,7 @@ export const query = graphql`
     datoCmsProduct(id: { eq: $id }) {
       id
       productType
+      buyUrl
       title
       available
       details
