@@ -32,7 +32,7 @@ const HamburgerMenu = ({ isMenuOpen, setIsMenuOpen }) => {
   return (
     <button
       aria-expanded={isMenuOpen}
-      className="lg:hidden"
+      className="lg:hidden py-1 px-2"
       onClick={() => setIsMenuOpen(!isMenuOpen)}
     >
       <span className="sr-only">Otwórz / Zamknij menu</span>
